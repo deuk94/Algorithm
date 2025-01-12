@@ -1,13 +1,19 @@
 import java.util.*;
 
 class Solution {
-    public List solution(String[] strArr) {
-        List<String> answer = new ArrayList<>();
+    public String[] solution(String[] strArr) {
+        List<String> str = new ArrayList<>();
         
-        for (String str : strArr) {
-            if (!str.contains("ad")) {
-                answer.add(str);
+        for (String i : strArr) {
+            if (!i.contains("ad")) {
+                str.add(i);
             }
+        }
+        
+        String[] answer = new String[str.size()];
+        
+        for (int i = 0; i < str.size(); i++) {
+            answer[i] = str.get(i);
         }
         return answer;
     }
