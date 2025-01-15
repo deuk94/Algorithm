@@ -1,17 +1,11 @@
 class Solution {
     public String solution(int age) {
-        String answer = Integer.toString(age);
+        String answer = "";
+        String str = Integer.toString(age);
         
-        answer = answer.replaceAll("0", "a")
-                        .replaceAll("1", "b")
-                        .replaceAll("2", "c")
-                        .replaceAll("3", "d")
-                        .replaceAll("4", "e")
-                        .replaceAll("5", "f")
-                        .replaceAll("6", "g")
-                        .replaceAll("7", "h")
-                        .replaceAll("8", "i")
-                        .replaceAll("9", "j");
+        for (int i = 0; i < str.length(); i++) {
+            answer += (char)(str.charAt(i) + 49);
+        }
         return answer;
     }
 }
