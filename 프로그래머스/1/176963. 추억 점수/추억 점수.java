@@ -14,8 +14,7 @@ class Solution {
             int sum = 0;
             for (int j = 0; j < photo[i].length; j++) {
                 if (map.containsKey(photo[i][j])) {
-                    photo[i][j] = Integer.toString(map.get(photo[i][j]));
-                    sum += Integer.parseInt(photo[i][j]);
+                    sum += map.get(photo[i][j]);
                 }
             }
             answer[i] = sum;
