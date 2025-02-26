@@ -13,8 +13,8 @@ public class Main {
 
         int n = Integer.parseInt(br.readLine());
         int m = Integer.parseInt(br.readLine());
-
         int[] arr = new int[n];
+
         StringTokenizer st = new StringTokenizer(br.readLine());
         for (int i = 0; i < n; i++) {
             arr[i] = Integer.parseInt(st.nextToken());
@@ -23,7 +23,7 @@ public class Main {
         int count = 0;
         int i = 0;
         int j = n - 1;
-        while (i < j) {
+        while(i < j) {
             if (arr[i] + arr[j] < m) {
                 i++;
             } else if (arr[i] + arr[j] > m) {
@@ -34,7 +34,6 @@ public class Main {
                 j--;
             }
         }
-
         bw.write(count + "");
         br.close();
         bw.close();
